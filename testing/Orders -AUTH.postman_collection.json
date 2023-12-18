@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "e08ab818-0fce-4951-acc6-d4f49618d114",
+		"name": "Orders -AUTH",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24500347"
+	},
+	"item": [
+		{
+			"name": "Создание заказа",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "4tHOtM-Mpk7Kp56uDLQ5GiHB9HLfRX1h"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"address\":\"Плесецкая 20к1\",\r\n    \"products\":[\r\n        {\r\n            \"id\": 9,\r\n            \"quantity\": 7\r\n        },\r\n        {\r\n            \"id\": 8,\r\n            \"quantity\": 7\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://k-vorobiev.xn--80ahdri7a.site/api/orderauth"
+			},
+			"response": []
+		},
+		{
+			"name": "Получение заказов пользователя",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "4tHOtM-Mpk7Kp56uDLQ5GiHB9HLfRX1h"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://k-vorobiev.xn--80ahdri7a.site/api/orderauth"
+			},
+			"response": []
+		},
+		{
+			"name": "Получение заказа по id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "4tHOtM-Mpk7Kp56uDLQ5GiHB9HLfRX1h"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://k-vorobiev.xn--80ahdri7a.site/api/orderauth/7"
+			},
+			"response": []
+		}
+	]
+}

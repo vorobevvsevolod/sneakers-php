@@ -1,0 +1,83 @@
+{
+	"info": {
+		"_postman_id": "ff62d1f8-e45d-431b-af81-0227aa9dc6ff",
+		"name": "Orders -NOAUTH",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24500347"
+	},
+	"item": [
+		{
+			"name": "Создание заказа",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"address\":\"Плесецкая 20к1\",\n    \"phone\": \"79110189847\",\n    \"products\":[\n        {\n            \"id\": 9,\n            \"quantity\": 7\n        },\n        {\n            \"id\": 8,\n            \"quantity\": 7\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://k-vorobiev.xn--80ahdri7a.site/api/ordernoauth"
+			},
+			"response": []
+		},
+		{
+			"name": "Получение заказов",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://k-vorobiev.xn--80ahdri7a.site/api/ordernoauth?phone=79110189847",
+					"protocol": "http",
+					"host": [
+						"k-vorobiev",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"ordernoauth"
+					],
+					"query": [
+						{
+							"key": "phone",
+							"value": "79110189847"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение заказа по id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://k-vorobiev.xn--80ahdri7a.site/api/ordernoauth/3?phone=79110189847",
+					"protocol": "http",
+					"host": [
+						"k-vorobiev",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"ordernoauth",
+						"3"
+					],
+					"query": [
+						{
+							"key": "phone",
+							"value": "79110189847"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

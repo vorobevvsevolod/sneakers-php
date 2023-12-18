@@ -1,0 +1,95 @@
+{
+	"info": {
+		"_postman_id": "1da65cea-6b8a-4d06-a74c-485516932592",
+		"name": "Cart",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24500347"
+	},
+	"item": [
+		{
+			"name": "Добавление товара в корзину",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "4tHOtM-Mpk7Kp56uDLQ5GiHB9HLfRX1h"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "quantity",
+							"value": "7",
+							"type": "text"
+						},
+						{
+							"key": "product_id",
+							"value": "7",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://k-vorobiev.xn--80ahdri7a.site/api/cart"
+			},
+			"response": []
+		},
+		{
+			"name": "Удаление товара из корзины",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "lpG2iqxXpOyhp6UyupMTqQUYcsxl8Rvi"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "http://k-vorobiev.xn--80ahdri7a.site/api/cart/13"
+			},
+			"response": []
+		},
+		{
+			"name": "Изменение количества товара в корзине",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "iodUdSIWytbgBBUQAmNin9WSr6Mf_zF3"
+					}
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "quantity",
+							"value": "150",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://k-vorobiev.xn--80ahdri7a.site/api/cart/6"
+			},
+			"response": []
+		},
+		{
+			"name": "получение корзины пользователя по токену",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "lpG2iqxXpOyhp6UyupMTqQUYcsxl8Rvi"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://k-vorobiev.xn--80ahdri7a.site/api/cart"
+			},
+			"response": []
+		}
+	]
+}

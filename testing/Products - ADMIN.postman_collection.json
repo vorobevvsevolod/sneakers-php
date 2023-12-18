@@ -1,0 +1,95 @@
+{
+	"info": {
+		"_postman_id": "ab3994c3-8e60-48e9-92c0-5636a5f6dc6a",
+		"name": "Products - ADMIN",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24500347"
+	},
+	"item": [
+		{
+			"name": "Создание нового товара - Админ",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "PbrnKXjw8xzdJyQwvnNz5VPHivJYYVbJ"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Кроссовки Мужские",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "12000",
+							"type": "text"
+						},
+						{
+							"key": "count",
+							"value": "1000",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Очень удобные кроссвоки",
+							"type": "text"
+						},
+						{
+							"key": "image_url",
+							"type": "file",
+							"src": "/C:/Users/seva3/OneDrive/Изображения/Снимки экрана/Снимок экрана 2023-03-03 182906.png"
+						}
+					]
+				},
+				"url": "http://k-vorobiev.xn--80ahdri7a.site/api/sneaker"
+			},
+			"response": []
+		},
+		{
+			"name": "Удаление товара по id -Админ ",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "4tHOtM-Mpk7Kp56uDLQ5GiHB9HLfRX1h"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "http://k-vorobiev.xn--80ahdri7a.site/api/sneaker/7"
+			},
+			"response": []
+		},
+		{
+			"name": "Изменение параметров в продукте - Админ",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "MRhsEV0HL6anq8A6YoEbUMWz9GKOeHAF"
+					}
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "123",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://k-vorobiev.xn--80ahdri7a.site/api/sneaker/2"
+			},
+			"response": []
+		}
+	]
+}

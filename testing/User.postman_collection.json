@@ -1,0 +1,133 @@
+{
+	"info": {
+		"_postman_id": "3185abd8-337b-404b-a0b2-73e2cc406ebb",
+		"name": "User",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24500347"
+	},
+	"item": [
+		{
+			"name": "Регистрация",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "seva31122003@mail.ru",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Seva311212003",
+							"type": "text"
+						},
+						{
+							"key": "fio",
+							"value": "Косинов Дмитрий",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "79110189847",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://k-vorobiev.xn--80ahdri7a.site/api/register"
+			},
+			"response": []
+		},
+		{
+			"name": "Получение информации по токену",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "lpG2iqxXpOyhp6UyupMTqQUYcsxl8Rvi"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://k-vorobiev.xn--80ahdri7a.site/api/user"
+			},
+			"response": []
+		},
+		{
+			"name": "Авторизация",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "seva31122003@mail.ru",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Seva311212003",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://k-vorobiev.xn--80ahdri7a.site/api/login"
+			},
+			"response": []
+		},
+		{
+			"name": "изменение номера телефона",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "iodUdSIWytbgBBUQAmNin9WSr6Mf_zF3"
+					}
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "phone",
+							"value": "79110189848",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://k-vorobiev.xn--80ahdri7a.site/api/phone"
+			},
+			"response": []
+		},
+		{
+			"name": "изменение почты",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "iodUdSIWytbgBBUQAmNin9WSr6Mf_zF3"
+					}
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "vorobev.seva96@mail.ru",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://k-vorobiev.xn--80ahdri7a.site/api/email"
+			},
+			"response": []
+		}
+	]
+}
